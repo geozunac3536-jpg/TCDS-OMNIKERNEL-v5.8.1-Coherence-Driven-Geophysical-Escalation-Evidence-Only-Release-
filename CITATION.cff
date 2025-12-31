@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset or evidence, please cite it as below."
+authors:
+- family-names: "TCDS Systems Architecture"
+  given-names: "Forensic Division"
+title: "TCDS Omnikernel v5.8: Thermodynamic Audit of Tectonic Nucleation (>M4.5)"
+version: 5.8.1
+doi: 10.5281/zenodo.18111574
+date-released: 2025-12-31
+url: "https://github.com/TCDS-Architecture/Omnikernel-Evidence"
+keywords:
+  - "seismology"
+  - "entropy"
+  - "forensic-engineering"
+  - "earthquake-prediction"
+
