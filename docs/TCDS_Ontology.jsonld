@@ -1,0 +1,102 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "TCDS Omnikernel v5.8",
+  "alternateName": "Sovereign Symbiont - Tectonic Nucleation Auditor",
+  "version": "5.8.0-RELEASE",
+  "author": {
+    "@type": "Organization",
+    "name": "Arquitectura de Sistemas TCDS",
+    "department": "División de Inteligencia Forense"
+  },
+  "description": "Sistema de auditoría termodinámica para la detección causal de nucleación sísmica (>M4.5) basado en la Ley de Escalada de Shannon y Fusión de Horizontes Temporales.",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "Python",
+    "version": "3.9+"
+  },
+  "keywords": [
+    "Sismología Forense",
+    "Entropía de Shannon",
+    "Punto de No Retorno (PNR)",
+    "Ley de Escalada",
+    "Nucleación Tectónica",
+    "Auditoría Causal",
+    "Alerta Sísmica Temprana"
+  ],
+  "datePublished": "2025-12-31",
+  "license": "https://tcds-architecture.org/licenses/proprietary",
+  
+  "potentialAction": {
+    "@type": "ControlAction",
+    "name": "AuditTectonicRisk",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "api/v1/audit/stream",
+      "description": "Ingesta de datos USGS/QuakeML para detección de ventanas precursoras."
+    }
+  },
+
+  "metadata": {
+    "@type": "Dataset",
+    "name": "TCDS Calibration Parameters (Level 5.8)",
+    "description": "Parámetros de calibración exclusivos para la detección de eventos mayores a M4.5.",
+    "variableMeasured": [
+      {
+        "@type": "PropertyValue",
+        "name": "BASELINE_WINDOW",
+        "value": "30 Days",
+        "unitText": "Duration",
+        "description": "Ventana temporal para el cálculo de la entropía ambiental (H0)."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "MAG_TARGET_MIN",
+        "value": 4.5,
+        "unitText": "Magnitude (Mw)",
+        "description": "Filtro de magnitud mínima para ignorar ruido sísmico irrelevante."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PNR_VETO_MACRO",
+        "value": -0.15,
+        "unitText": "Delta Shannon Entropy (ΔH)",
+        "description": "Umbral de tendencia para la detección de carga de estrés a largo plazo."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PNR_VETO_MICRO",
+        "value": -0.25,
+        "unitText": "Delta Shannon Entropy (ΔH)",
+        "description": "Umbral crítico (Gatillo) para la confirmación de ruptura inminente."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "VALIDATION_HORIZON",
+        "value": 48,
+        "unitText": "Hours",
+        "description": "Horizonte máximo de causalidad directa entre la alarma y el evento."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ENTROPY_BASE",
+        "value": 2,
+        "unitText": "Log Base",
+        "description": "Base logarítmica para maximizar la sensibilidad a bits de información (Shannon)."
+      }
+    ]
+  },
+
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "TCDS_ESCALATION_LAW_GEO_REPORT.json",
+      "description": "Evidencia forense de ventanas de reacción confirmadas (Bolivia, Australia, Micronesia)."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "TCDS_ESCALATION_LAW_REPORT.png",
+      "description": "Visualización gráfica de la convergencia de entropía y sismicidad."
+    }
+  ]
+}
